@@ -1,0 +1,29 @@
+.box-background {
+  background: white;
+  width: 600px;
+  border-radius: 5px;
+}
+
+.box-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.box-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-button__next {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.box-button__next > .next {
+  margin-left: auto;
+  background: #1ba4ce;
+  width: 100px;
+  font-size: 1rem;
+}
