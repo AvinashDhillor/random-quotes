@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 class Display extends React.Component {
@@ -13,6 +12,8 @@ class Display extends React.Component {
     };
     this.isClicked = this.isClicked.bind(this);
   }
+
+
 
   getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
