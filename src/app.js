@@ -1,15 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 // import 'normalize.css/normalize.css';
-import "./styles/styles.scss";
+import './styles/styles.scss';
 
 class Display extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       quotes: [],
-      quote: "",
-      author: ""
+      quote: '',
+      author: ''
     };
     this.isClicked = this.isClicked.bind(this);
   }
@@ -20,7 +20,7 @@ class Display extends React.Component {
 
   componentWillMount() {
     fetch(
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+      'https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json'
     )
       .then(response => {
         return response.json();
@@ -38,10 +38,12 @@ class Display extends React.Component {
 
   isClicked() {
     let random = this.getRandomInt(this.state.quotes.length);
-    this.setState(() => ({
-      quote: this.state.quotes[random].quote,
-      author: this.state.quotes[random].author
-    }));
+    setTimeout(() => {
+      this.setState(() => ({
+        quote: this.state.quotes[random].quote,
+        author: this.state.quotes[random].author
+      }));
+    }, 200);
   }
 
   render() {
